@@ -1,0 +1,97 @@
+# queries varias del proyecto 2_Academia_Online
+
+# Write your query or mutation herem
+mutation nuevoCurso($curso: CursoInput!) {
+  cursoNuevo(curso: $curso){
+    id
+    title
+    description
+    time
+  }
+}
+
+query todosCursos{
+  cursos{
+    id
+    title
+    time
+    level
+  }
+}
+
+{
+  "curso": {
+    "title": "Curso de historia",
+    "description": "Vamos a parender",
+    "clases": 159,
+    "time": 56.0,
+    "logo": "",
+    "path": "",
+    "level": "INTERMEDIO",
+    "teacher": "Josete"
+  }
+}
+
+########################################################
+
+# Write your query or mutation herem
+mutation modCurso($curso: CursoInput!) {
+  modificarCurso(curso: $curso){
+    id
+    title
+    description
+    time
+    level
+  }
+}
+
+mutation removeCurso($idcurso: ID!) {
+  eliminarCurso(id: $idcurso){
+    id
+    title
+    description
+    time
+    level
+  }
+}
+
+{
+  "curso": {
+    "id": 6,
+    "title": "Curso de GraphQL",
+    "description": "Vamos a parender",
+    "clases": 257,
+    "time": 33.0,
+    "logo": "",
+    "path": "",
+    "level": "INTERMEDIO",
+    "teacher": "Josete"
+  },
+  "idcurso": 6
+}
+
+############################################################
+
+{
+  curso (id_curso: 6){
+    title
+    time
+    level
+  }
+}
+
+############################################################
+
+mutation removeCurso($curso: ID!) {
+  eliminarCurso(id: $curso){
+    id
+    title
+    description
+    time
+    level
+  }
+}
+
+{
+  "curso": "2"
+}
