@@ -30,7 +30,7 @@
     "graphql-tag-pluck": "^0.8.7",
     "graphql-tools": "^5.0.0",
     "http": "0.0.1-security",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "ncp": "^2.0.0",
     "typescript": "^3.8.3"
   },
